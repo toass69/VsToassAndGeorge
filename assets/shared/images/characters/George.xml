@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="george.png">
+<SubTexture name="george idle0000" x="428" y="621" width="165" height="289" frameX="-111" frameY="-53" frameWidth="420" frameHeight="378" />
+<SubTexture name="george idle0001" x="490" y="313" width="161" height="295" frameX="-112" frameY="-47" frameWidth="420" frameHeight="378" />
+<SubTexture name="george idle0002" x="658" y="306" width="170" height="299" frameX="-108" frameY="-43" frameWidth="420" frameHeight="378" />
+<SubTexture name="george idle0003" x="837" y="306" width="173" height="304" frameX="-107" frameY="-38" frameWidth="420" frameHeight="378" />
+<SubTexture name="george idle0004" x="658" y="0" width="179" height="306" frameX="-99" frameY="-36" frameWidth="420" frameHeight="378" />
+<SubTexture name="george left0000" x="238" y="0" width="229" height="311" frameX="-139" frameY="-31" frameWidth="420" frameHeight="378" />
+<SubTexture name="george left0001" x="0" y="0" width="238" height="313" frameX="-144" frameY="-29" frameWidth="420" frameHeight="378" />
+<SubTexture name="george right0000" x="0" y="313" width="249" height="308" frameX="-76" frameY="-34" frameWidth="420" frameHeight="378" />
+<SubTexture name="george right0001" x="249" y="313" width="241" height="307" frameX="-73" frameY="-35" frameWidth="420" frameHeight="378" />
+<SubTexture name="george down0000" x="218" y="621" width="210" height="293" frameX="-99" frameY="-50" frameWidth="420" frameHeight="378" />
+<SubTexture name="george down0001" x="0" y="621" width="218" height="297" frameX="-105" frameY="-46" frameWidth="420" frameHeight="378" />
+<SubTexture name="george up0000" x="837" y="0" width="191" height="306" frameX="-99" frameY="-36" frameWidth="420" frameHeight="378" />
+<SubTexture name="george up0001" x="467" y="0" width="191" height="311" frameX="-102" frameY="-31" frameWidth="420" frameHeight="378" />
+</TextureAtlas>

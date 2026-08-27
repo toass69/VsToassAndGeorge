@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="REDACTOASS.png">
+<SubTexture name="REDACTOASS Idle0000" x="867" y="935" width="925" height="805" frameX="-75" frameY="-256" frameWidth="1104" frameHeight="1104" />
+<SubTexture name="REDACTOASS Idle0001" x="2159" y="788" width="860" height="784" frameX="-73" frameY="-289" frameWidth="1104" frameHeight="1104" />
+<SubTexture name="REDACTOASS Idle0002" x="1547" y="0" width="612" height="815" frameX="-232" frameY="-279" frameWidth="1104" frameHeight="1104" />
+<SubTexture name="REDACTOASS Idle0003" x="0" y="1745" width="550" height="773" frameX="-251" frameY="-295" frameWidth="1104" frameHeight="1104" />
+<SubTexture name="REDACTOASS Idle0004" x="1669" y="1745" width="485" height="714" frameX="-294" frameY="-325" frameWidth="1104" frameHeight="1104" />
+<SubTexture name="REDACTOASS Down0000" x="1105" y="1745" width="564" height="722" frameX="-283" frameY="-167" frameWidth="1104" frameHeight="1104" />
+<SubTexture name="REDACTOASS Down0001" x="550" y="1745" width="555" height="756" frameX="-296" frameY="-107" frameWidth="1104" frameHeight="1104" />
+<SubTexture name="REDACTOASS Left0000" x="0" y="935" width="867" height="810" frameX="-92" frameY="-294" frameWidth="1104" frameHeight="1104" />
+<SubTexture name="REDACTOASS Left0001" x="2159" y="0" width="967" height="788" frameX="-44" frameY="-299" frameWidth="1104" frameHeight="1104" />
+<SubTexture name="REDACTOASS Up0000" x="799" y="0" width="748" height="884" frameX="-173" frameY="-213" frameWidth="1104" frameHeight="1104" />
+<SubTexture name="REDACTOASS Up0001" x="0" y="0" width="799" height="935" frameX="-209" frameY="-162" frameWidth="1104" frameHeight="1104" />
+<SubTexture name="REDACTOASS Right0000" x="2154" y="1745" width="579" height="677" frameX="-251" frameY="-415" frameWidth="1104" frameHeight="1104" />
+<SubTexture name="REDACTOASS Right0001" x="3126" y="0" width="666" height="675" frameX="-207" frameY="-396" frameWidth="1104" frameHeight="1104" />
+</TextureAtlas>
