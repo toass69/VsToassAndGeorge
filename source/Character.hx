@@ -183,6 +183,27 @@ class Character extends FlxSprite
 
 				flipX = true;
 
+			case 'gorgeein':
+				// ITS GEORGES BRO
+				tex = Paths.getSparrowAtlas('characters/gorgeein');
+				frames = tex;
+                animation.addByPrefix('idle', 'idle', 12, false);
+				animation.addByPrefix('singUP', 'up', 12, false);
+				animation.addByPrefix('singRIGHT', 'right', 12, false);
+				animation.addByPrefix('singLEFT', 'left', 12, false);
+				animation.addByPrefix('singDOWN', 'down', 12, false);
+
+				addOffset('idle',-4,1);
+				addOffset("singUP", 21, 29);
+				addOffset("singRIGHT", -8, -2);
+				addOffset("singLEFT", 51, 5);
+				addOffset("singDOWN", 34, 13);
+
+				setGraphicSize(Std.int(width * 1.4));
+				updateHitbox();
+
+				playAnim('idle');
+
 			case 'REDACTOASS':
 				// TOASS ANIMATION LOADING CODE (ported from toass.json)
 				tex = Paths.getSparrowAtlas('characters/REDACTOASS');
@@ -278,6 +299,26 @@ case 'toass-angry':
     updateHitbox();
 
     playAnim('idle');
+			case 'haambi':
+				// ported from old source code
+				tex = Paths.getSparrowAtlas('characters/haambi');
+				frames = tex;
+				animation.addByPrefix('idle', 'idle', 24, false);
+				animation.addByPrefix('singUP', 'up', 24, false);
+				animation.addByPrefix('singRIGHT', 'right', 24, false);
+				animation.addByPrefix('singDOWN', 'down', 24, false);
+				animation.addByPrefix('singLEFT', 'left', 24, false);
+		
+				addOffset('idle');
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
+				setGraphicSize(Std.int(width * furiosityScale),Std.int(height * furiosityScale));
+				updateHitbox();
+				antialiasing = false;
+		
+				playAnim('idle');
 
 			case 'bf':
 				var tex = Paths.getSparrowAtlas('characters/BOYFRIEND');

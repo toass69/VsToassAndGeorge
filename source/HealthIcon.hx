@@ -21,6 +21,7 @@ class HealthIcon extends FlxSprite
 		animation.add('face', [10, 11], 0, false, isPlayer);
 		animation.add('dad', [12, 13], 0, false, isPlayer);
 		animation.add('gf', [16], 0, false, isPlayer);
+		animation.add('gorgeein', [17, 18], 0, false, isPlayer);
 		animation.add('toass', [24, 25], 0, false, isPlayer);
 		animation.add('REDACTOASS', [8, 9], 0, false, isPlayer);
 		animation.add('toass-angry', [2, 3], 0, false, isPlayer);
@@ -31,6 +32,7 @@ class HealthIcon extends FlxSprite
 		animation.add('the-duo', [32, 33], 0, false, isPlayer);
 		animation.add('mr-toass', [34, 35], 0, false, isPlayer);
 		animation.add('betatoass', [34, 35], 0, false, isPlayer);
+		animation.add('toass-3d', [36, 37], 0, false, isPlayer);
 		scrollFactor.set();
 
 		changeIcon(char);
@@ -48,7 +50,7 @@ class HealthIcon extends FlxSprite
 		animation.play(iconAnim);
 
 		antialiasing = !(hasIcon
-			&& (char == 'toass-3d-angey' || char == 'bambi-3d' || char == 'senpai' || char == 'bf-pixel' || char == 'spirit' || char == 'senpai-angry'));
+			&& (char == 'toass-3d-angey' || char == 'toass-3d' || char == 'toass-unfair' || char == 'senpai' || char == 'bf-pixel' || char == 'spirit' || char == 'senpai-angry'));
 	}
 
 	override function update(elapsed:Float)

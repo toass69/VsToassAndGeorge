@@ -44,6 +44,7 @@ class CharacterSelectState extends MusicBeatState
 	public var curForm:Int;
 	public var notemodtext:FlxText;
 	public var characterText:FlxText;
+	public var curbg:FlxSprite;
 
 	public var isDebug:Bool = false; //CHANGE THIS TO FALSE BEFORE YOU COMMIT RETARDS
 
@@ -51,38 +52,54 @@ class CharacterSelectState extends MusicBeatState
 
 	var selectedCharacter:Bool = false;
 
+	var defaultCamZoom:Float = 1.05;
+
 	var currentSelectedCharacter:CharacterInSelect;
 
-	var noteMsTexts:FlxTypedGroup<FlxText> = new FlxTypedGroup<FlxText>();
-
-	//it goes left,right,up,down
+	var noteMsTexts:FlxTypedGroup<FlxText> = new FlxTypedGroup<FlxText>();	//it goes left,right,up,down
 	
 	public var characters:Array<CharacterInSelect> = 
+	[
 		new CharacterInSelect(['bf'], [1, 1, 1, 1], ["Boyfriend"]),
 		new CharacterInSelect(['bf-pixel'], [1, 1, 1, 1], ["Pixel Boyfriend"]),
+		new CharacterInSelect(['tristan'], [2, 0.5, 0.5, 0.5], ["Tristan"]),
 		new CharacterInSelect(['george', 'george-dave'], [0.25, 0.25, 2, 2], ["George", "George (Dave)"]),
 		new CharacterInSelect(['toass', 'toass-angey', 'toass-oldest', 'toass-old'], [0, 0, 3, 0], ["Toass", "Toass (Pissed)", "2021 Toass", "Alt.Toass", "Alt.Toass()", "Alt.Toass (Mad)"]),
 		new CharacterInSelect(['toass-angey-3d', 'haambi'], [2, 2, 0.25, 0.25], ["3D Toass", "Haambi"]),
 		new CharacterInSelect(['tristan-golden'], [0.25, 0.25, 0.25, 2], ["Golden Tristan"]),
 		new CharacterInSelect(['toass-3d', 'toass-unfair'], [0, 3, 0, 0], ["3D Mr.Toass", 'Unfair Mr.Toass'])	
-	];
+];
 	public function new() 
 	{
 		super();
 	}
 	
+	// songs listed here will skip character select entirely and go straight into PlayState
+	public static var skipSelectSongs:Array<String> = ['8-28-63'];
+
 	override public function create():Void 
 	{
 		super.create();
+
+		if (PlayState.SONG != null && skipSelectSongs.indexOf(PlayState.SONG.song.toLowerCase()) != -1)
+		{
+			var defaultChar:CharacterInSelect = characters[0]; // bf
+			PlayState.characteroverride = defaultChar.names[0];
+			PlayState.formoverride = defaultChar.names[0];
+			PlayState.curmult = defaultChar.noteMs;
+			LoadingState.loadAndSwitchState(new PlayState());
+			return;
+		}
+
 		Conductor.changeBPM(110);
 		currentSelectedCharacter = characters[current];
 		if (FlxG.save.data.unlockedcharacters == null)
 		{
-			FlxG.save.data.unlockedcharacters = [true,true];
+			FlxG.save.data.unlockedcharacters = [true,true,false,false,false,false,false];
 		}
 		if(isDebug)	
 		{
-			FlxG.save.data.unlockedcharacters = [true,true]; //unlock everyone
+			FlxG.save.data.unlockedcharacters = [true,true,true,true,true,true,true]; //unlock everyone
 		}
 
 		var end:FlxSprite = new FlxSprite(0, 0);
@@ -90,6 +107,8 @@ class CharacterSelectState extends MusicBeatState
 		add(end);
 		FlxG.camera.fade(FlxColor.BLACK, 0.8, true);
 		//create stage
+		
+		defaultCamZoom = 0.9;
 		var bg:FlxSprite = new FlxSprite(-600, -500).loadGraphic(Paths.image('toass/sky'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.01, 0.01);
@@ -112,8 +131,6 @@ class CharacterSelectState extends MusicBeatState
 		stageHills.scrollFactor.set(1.0, 1.0);
 		stageHills.active = true;
 		add(stageHills);
-
-		FlxG.camera.zoom = 0.75;
 
 		FlxG.camera.zoom = 0.75;
 
@@ -271,11 +288,22 @@ class CharacterSelectState extends MusicBeatState
 		char = new Boyfriend(FlxG.width / 2, FlxG.height / 2, currentSelectedCharacter.names[curForm]);
 		char.screenCenter();
 		char.y = FlxG.height / 2;
+		switch (char.curCharacter)
+		{
+			case 'dave-angey':
+				char.y -= 225;
+		}
 		add(char);
 		if (!FlxG.save.data.unlockedcharacters[current])
 		{
 			char.color = FlxColor.BLACK;
 			characterText.text = '???';
+			if(char.curCharacter == 'toass-3d' || char.curCharacter == 'toass-unfair')
+			{
+				//funny canon name
+				characterText.text = '[̵̨̩̦̖̩̳͍̲̖̜̩̭̥̯̻̥̳͔͙̘̟͉̕R̶̡̡̲̳̘͈͕͙̤̭͍̼̪̣̯̩͎͙̭̜̙͖͆̊̈́̔͊̂͌̈́̔̽̕͜Ḁ̷̧̡̩͔̲͖͖̪͎̩͈̗͈͒̈́̍̇̀̋̆͆̆Š̵̢͎͔̗͉̰̺̩͔̅̍͒͌̿́̍̈́̽̈̔̏͆̿̒̾̕͘͝͝S̸̖̤͎̬̝͆̔̔̅͐̓̄̐͂̄̈́͗̈́̓́̀̿̒̚̕͜Ï̷̧̜̰̬̮̰̹̎̐̔̐̀̈́̈́͆̎͐͛̋͘̚N̴̨̧̼͖̭̪̺̱̫͚̣͈̼̬̼͈̝̆̀̋͌̈́̏́̑́̄̌͌̾̈͌̏̕͝͠]̴̨̨̛̗̩̻̖͈͉̻̱̲̯̫̙͚̠̹̟͊̀͒̈́̎͋̇̀͋́͂͊͘̚͘̚';
+			}
+
 		}
 		notemodtext.text = FlxStringUtil.formatMoney(currentSelectedCharacter.noteMs[0]) + "x       " + FlxStringUtil.formatMoney(currentSelectedCharacter.noteMs[3]) + "x        " + FlxStringUtil.formatMoney(currentSelectedCharacter.noteMs[2]) + "x       " + FlxStringUtil.formatMoney(currentSelectedCharacter.noteMs[1]) + "x";
 	}

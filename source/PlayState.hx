@@ -175,7 +175,6 @@ class PlayState extends MusicBeatState
 	var talking:Bool = true;
 	var scoreTxt:FlxText;
 
-	var deezer:ShaggyModMoment;
 
 	public static var campaignScore:Int = 0;
 
@@ -329,23 +328,24 @@ if (SONG.song.toLowerCase() == 'suppression')
 	add(floatLand);
 }
 if (SONG.song.toLowerCase() == 'thunderstorm')
+{
 	curStage = 'out';
 	defaultCamZoom = 0.8;
 
-	var sky:ShaggyModMoment = new ShaggyModMoment('backgrounds/thunda/sky', -1204, -456, 0.15, 1, 0);
+	var sky:FlxSprite = new FlxSprite('backgrounds/thunda/sky', -1204, -456, 0.15, 1, 0);
 
 	add(sky);
 
-	// var clouds:ShaggyModMoment = new ShaggyModMoment('backgrounds/thunda/clouds', -988, -260, 0.25, 1, 1);
+	// var clouds:FlxSprite = new FlxSprite('backgrounds/thunda/clouds', -988, -260, 0.25, 1, 1);
 	// add(clouds);
 
-	var backMount:ShaggyModMoment = new ShaggyModMoment('backgrounds/thunda/backmount', -700, -40, 0.4, 1, 2);
+	var backMount:FlxSprite = new FlxSprite('backgrounds/thunda/backmount', -700, -40, 0.4, 1, 2);
 	add(backMount);
 
-	var middleMount:ShaggyModMoment = new ShaggyModMoment('backgrounds/thunda/middlemount', -240, 200, 0.6, 1, 3);
+	var middleMount:FlxSprite = new FlxSprite('backgrounds/thunda/middlemount', -240, 200, 0.6, 1, 3);
 	add(middleMount);
 
-	var ground:ShaggyModMoment = new ShaggyModMoment('backgrounds/thunda/ground', -660, 624, 1, 1, 4);
+	var ground:FlxSprite = new FlxSprite('backgrounds/thunda/ground', -660, 624, 1, 1, 4);
 	ground.setGraphicSize(Std.int(ground.width * 2));
 	add(ground);
 }
