@@ -332,20 +332,24 @@ if (SONG.song.toLowerCase() == 'thunderstorm')
 	curStage = 'out';
 	defaultCamZoom = 0.8;
 
-	var sky:FlxSprite = new FlxSprite('backgrounds/thunda/sky', -1204, -456, 0.15, 1, 0);
+	var sky:FlxSprite = new FlxSprite(-1204, -456).loadGraphic(Paths.image('backgrounds/thunda/sky'));
+	sky.scrollFactor.set(0.15, 1);
 
 	add(sky);
 
-	// var clouds:FlxSprite = new FlxSprite('backgrounds/thunda/clouds', -988, -260, 0.25, 1, 1);
+	// var clouds:FlxSprite = new FlxSprite(-988, -260).loadGraphic(Paths.image('backgrounds/thunda/clouds'));
+	// clouds.scrollFactor.set(0.25, 1);
 	// add(clouds);
 
-	var backMount:FlxSprite = new FlxSprite('backgrounds/thunda/backmount', -700, -40, 0.4, 1, 2);
+	var backMount:FlxSprite = new FlxSprite(-700, -40).loadGraphic(Paths.image('backgrounds/thunda/backmount'));
+	backMount.scrollFactor.set(0.4, 1);
 	add(backMount);
 
-	var middleMount:FlxSprite = new FlxSprite('backgrounds/thunda/middlemount', -240, 200, 0.6, 1, 3);
+	var middleMount:FlxSprite = new FlxSprite(-240, 200).loadGraphic(Paths.image('backgrounds/thunda/middlemount'));
+	middleMount.scrollFactor.set(0.6, 1);
 	add(middleMount);
 
-	var ground:FlxSprite = new FlxSprite('backgrounds/thunda/ground', -660, 624, 1, 1, 4);
+	var ground:FlxSprite = new FlxSprite(-660, 624).loadGraphic(Paths.image('backgrounds/thunda/ground'));
 	ground.setGraphicSize(Std.int(ground.width * 2));
 	add(ground);
 }
