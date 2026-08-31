@@ -62,11 +62,11 @@ class CharacterSelectState extends MusicBeatState
 	[
 		new CharacterInSelect(['bf'], [1, 1, 1, 1], ["Boyfriend"]),
 		new CharacterInSelect(['bf-pixel'], [1, 1, 1, 1], ["Pixel Boyfriend"]),
-		new CharacterInSelect(['tristan'], [2, 0.5, 0.5, 0.5], ["Tristan"]),
-		new CharacterInSelect(['george', 'george-dave'], [0.25, 0.25, 2, 2], ["George", "George (Dave)"]),
-		new CharacterInSelect(['toass', 'toass-angey', 'toass-oldest', 'toass-old'], [0, 0, 3, 0], ["Toass", "Toass (Pissed)", "2021 Toass", "Alt.Toass", "Alt.Toass()", "Alt.Toass (Mad)"]),
+		new CharacterInSelect(['khalil', 'adem'], [2, 2, 0.25, 0.25], ["Khalil", "Adem"]),
+		new CharacterInSelect(['george', 'gorgeein'], [0.25, 0.25, 2, 2], ["George", "Gorgeein"]),
+		new CharacterInSelect(['toass', 'toass-angey', 'marcello-toass', 'betatoass'], [0, 0, 3, 0], ["Toass", "Toass (Pissed)", "Toass (Enraged)", "Toass (Beta 2021)"]),
 		new CharacterInSelect(['toass-angey-3d', 'haambi'], [2, 2, 0.25, 0.25], ["3D Toass", "Haambi"]),
-		new CharacterInSelect(['tristan-golden'], [0.25, 0.25, 0.25, 2], ["Golden Tristan"]),
+		new CharacterInSelect(['george-3d'], [0.25, 0.25, 0.25, 2], ["George(3D)"]),
 		new CharacterInSelect(['toass-3d', 'toass-unfair'], [0, 3, 0, 0], ["3D Mr.Toass", 'Unfair Mr.Toass'])	
 ];
 	public function new() 
