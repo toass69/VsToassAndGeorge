@@ -528,6 +528,11 @@ else
 				dad.y += 350;
 				dad.x += 0;
 			}
+		case 'gorgeein':
+			{
+				dad.y += 350;
+				dad.x += 0;
+			}
 		case 'toass-angry':
 			{
 				dad.y += 470;

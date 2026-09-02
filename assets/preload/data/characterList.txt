@@ -6,3 +6,6 @@ marcello-toass
 bf-pixel
 gf-pixel
 gorgeein
+haambi
+toass-3d
+toass-unfair
