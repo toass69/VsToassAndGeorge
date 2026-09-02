@@ -187,11 +187,11 @@ class Character extends FlxSprite
 				// ITS GEORGES BRO
 				tex = Paths.getSparrowAtlas('characters/gorgeein');
 				frames = tex;
-                animation.addByPrefix('idle', 'idle', 12, false);
-				animation.addByPrefix('singUP', 'up', 12, false);
-				animation.addByPrefix('singRIGHT', 'right', 12, false);
-				animation.addByPrefix('singLEFT', 'left', 12, false);
-				animation.addByPrefix('singDOWN', 'down', 12, false);
+                animation.addByPrefix('idle', 'idle', 24, false);
+				animation.addByPrefix('singUP', 'up', 24, false);
+				animation.addByPrefix('singRIGHT', 'right', 24, false);
+				animation.addByPrefix('singLEFT', 'left', 24, false);
+				animation.addByPrefix('singDOWN', 'down', 24, false);
 
 				addOffset('idle',-4,1);
 				addOffset("singUP", 21, 29);
