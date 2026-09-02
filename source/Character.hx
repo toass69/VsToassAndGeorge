@@ -269,6 +269,40 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
+			case 'mrtoass':
+				var tex = Paths.getSparrowAtlas('toass/MrToassNew');
+				frames = tex;
+				animation.addByPrefix('idle', 'MrToassNew Idle', 24, false);
+				animation.addByPrefix('singUP', 'MrToassNew Up', 24, false);
+				animation.addByPrefix('singLEFT', 'MrToassNew Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'MrToassNew Right', 24, false);
+				animation.addByPrefix('singDOWN', 'MrToassNew Down', 24, false);
+				animation.addByPrefix('idle', 'MrToassNew Idle', 24, false);
+				animation.addByPrefix('singUPmiss', 'MrToassNew Up', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'MrToassNew Left', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'MrToassNew Right', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'MrToassNew Down', 24, false);
+
+				animation.addByPrefix('firstDeath', "MrToassNew Idle", 24, false);
+				animation.addByPrefix('deathLoop', "MrToassNew Idle", 24, true);
+				animation.addByPrefix('deathConfirm', "MrToassNew Idle", 24, false);
+	
+				addOffset('idle');
+				addOffset("singUP", -16, 3);
+				addOffset("singRIGHT", 0, -4);
+				addOffset("singLEFT", -10, -2);
+				addOffset("singDOWN", -10, -17);
+				addOffset("singUPmiss", -6, 4);
+				addOffset("singRIGHTmiss", 0, -4);
+				addOffset("singLEFTmiss", -10, -2);
+				addOffset("singDOWNmiss", -10, -17);
+
+				playAnim('idle');
+
+				nativelyPlayable = true;
+	
+				flipX = false;
+
 case 'toass-angry':
     // TOASS ANIMATION LOADING CODE (ported from toass.json)
     tex = Paths.getSparrowAtlas('characters/RedToass');
@@ -299,6 +333,52 @@ case 'toass-angry':
     updateHitbox();
 
     playAnim('idle');
+
+				case 'toass-3d':
+				// BAMBI SHITE ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('toass/toass_angryboy');
+				frames = tex;
+				animation.addByPrefix('idle', 'DaveAngry idle dance', 12, false);
+				animation.addByPrefix('singUP', 'DaveAngry Sing Note UP', 12, false);
+				animation.addByPrefix('singRIGHT', 'DaveAngry Sing Note RIGHT', 12, false);
+				animation.addByPrefix('singDOWN', 'DaveAngry Sing Note DOWN', 12, false);
+				animation.addByPrefix('singLEFT', 'DaveAngry Sing Note LEFT', 12, false);
+		
+				addOffset('idle');
+				addOffset("singUP", 20, 230);
+				addOffset("singRIGHT", -16, 0);
+				addOffset("singLEFT", 101, 100);
+				addOffset("singDOWN", 15, 91);
+				globaloffset[0] = 150;
+				globaloffset[1] = 450; //this is the y
+				setGraphicSize(Std.int(width / furiosityScale));
+				updateHitbox();
+				antialiasing = false;
+		
+				playAnim('idle');
+			case 'toass-unfair':
+				// BAMBI SHITE ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('toass/unfair_toass');
+				frames = tex;
+				animation.addByPrefix('idle', 'idle', 24, false);
+				animation.addByPrefix('singUP', 'up', 24, false);
+				animation.addByPrefix('singRIGHT', 'right', 24, false);
+				animation.addByPrefix('singDOWN', 'down', 24, false);
+				animation.addByPrefix('singLEFT', 'left', 24, false);
+		
+				addOffset('idle');
+				addOffset("singUP", 140, 70);
+				addOffset("singRIGHT", -180, -60);
+				addOffset("singLEFT", 250, 0);
+				addOffset("singDOWN", 150, 50);
+				globaloffset[0] = 150 * 1.3;
+				globaloffset[1] = 450 * 1.3; //this is the y
+				setGraphicSize(Std.int((width * 1.3) / furiosityScale));
+				updateHitbox();
+				antialiasing = false;
+		
+				playAnim('idle');
+
 			case 'haambi':
 				// ported from old source code
 				tex = Paths.getSparrowAtlas('characters/haambi');

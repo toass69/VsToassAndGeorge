@@ -303,7 +303,7 @@ if (SONG.song.toLowerCase() == 'suppression')
 	curStage = 'suppression';
 	
 	// 3D World background
-	var bg3d:FlxSprite = new FlxSprite(-300, -200).loadGraphic(Paths.image('backgrounds/3Dworld/3dworld'));
+	var bg3d:FlxSprite = new FlxSprite(-300, -200).loadGraphic(Paths.image('backgrounds/ruhroh/3dworld'));
 	bg3d.antialiasing = true;
 	bg3d.scrollFactor.set(0.9, 0.9);
 	bg3d.active = true;
@@ -320,7 +320,7 @@ if (SONG.song.toLowerCase() == 'suppression')
 	curbg = bg3d;
 	
 	// Floating land platform
-	var floatLand:FlxSprite = new FlxSprite(315, 700).loadGraphic(Paths.image('backgrounds/3Dworld/land'));
+	var floatLand:FlxSprite = new FlxSprite(315, 700).loadGraphic(Paths.image('backgrounds/ruhroh/land'));
 	floatLand.antialiasing = true;
 	floatLand.scrollFactor.set(1, 1);
 	floatLand.setGraphicSize(Std.int(floatLand.width * 1));
@@ -350,7 +350,7 @@ if (SONG.song.toLowerCase() == 'thunderstorm')
 	add(middleMount);
 
 	var ground:FlxSprite = new FlxSprite(-660, 624).loadGraphic(Paths.image('backgrounds/thunda/ground'));
-	ground.setGraphicSize(Std.int(ground.width * 2));
+	ground.setGraphicSize(Std.int(ground.width * 1.7));
 	add(ground);
 }
 else if (SONG.song.toLowerCase() == 'cheating')

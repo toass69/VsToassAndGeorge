@@ -110,7 +110,7 @@ class CharacterSelectState extends MusicBeatState
 		//create stage
 		
 		defaultCamZoom = 0.9;
-		var bg:FlxSprite = new FlxSprite(-600, -500).loadGraphic(Paths.image('backgrounds/toassHouse/bluesky'));
+		var bg:FlxSprite = new FlxSprite(-600, -500).loadGraphic(Paths.image('backgrounds/joke/mrtoassbg'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.01, 0.01);
 		bg.active = true;
