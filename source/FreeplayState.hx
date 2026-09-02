@@ -135,6 +135,8 @@ class FreeplayState extends MusicBeatState
 		{
 			addWeek(['8 28 63'], 8, ['george']);
             addWeek(['Old Toass'], 7, ['toass']);
+            addWeek(['Thunderstorm'], 7, ['toass']);
+            addWeek(['Old Times'], 7, ['toass']);
 			if (FlxG.save.data.doneForeverFound)
 			{
 				addWeek(['Done Forever'], 7, ['REDACTOASS']);

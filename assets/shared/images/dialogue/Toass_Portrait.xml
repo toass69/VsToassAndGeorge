@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Toass_Portrait.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="toass portrait0000" x="0" y="0" width="253" height="270" frameX="0" frameY="0" frameWidth="485" frameHeight="270"/>
+	<SubTexture name="toass portrait0001" x="258" y="0" width="253" height="270" frameX="-58" frameY="0" frameWidth="485" frameHeight="270"/>
+	<SubTexture name="toass portrait0002" x="516" y="0" width="253" height="270" frameX="-116" frameY="0" frameWidth="485" frameHeight="270"/>
+	<SubTexture name="toass portrait0003" x="0" y="275" width="253" height="270" frameX="-174" frameY="0" frameWidth="485" frameHeight="270"/>
+	<SubTexture name="toass portrait0004" x="258" y="275" width="253" height="270" frameX="-232" frameY="0" frameWidth="485" frameHeight="270"/>
+</TextureAtlas>
