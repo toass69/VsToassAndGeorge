@@ -23,6 +23,7 @@ import flixel.util.FlxStringUtil;
  i don't know about the rest of the mod but since this is basically 99% my code 
  i do not give you guys permission to grab this specific code and re-use it in your own mods without asking me first.
  the secondary dev, ben
+ i dont give a damn abt you bro - toassuk
 */
 class CharacterInSelect
 {
@@ -124,7 +125,7 @@ class CharacterSelectState extends MusicBeatState
 		bg.shader = testshader.shader;
 		curbg = bg;
 
-		var stageHills:FlxSprite = new FlxSprite(-300, 200).loadGraphic(Paths.image('backgrounds/joke/jokegrass'));
+		var stageHills:FlxSprite = new FlxSprite(-300, 200).loadGraphic(Paths.image('backgrounds/joke/mrtoassgrass'));
 		stageHills.setGraphicSize(Std.int(stageHills.width * 2.5));
 		stageHills.updateHitbox();
 		stageHills.antialiasing = true;
