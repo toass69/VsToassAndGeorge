@@ -109,7 +109,7 @@ class CharacterSelectState extends MusicBeatState
 		//create stage
 		
 		defaultCamZoom = 0.9;
-		var bg:FlxSprite = new FlxSprite(-600, -500).loadGraphic(Paths.image('toass/sky'));
+		var bg:FlxSprite = new FlxSprite(-600, -500).loadGraphic(Paths.image('backgrounds/toassHouse/bluesky'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.01, 0.01);
 		bg.active = true;
@@ -124,7 +124,7 @@ class CharacterSelectState extends MusicBeatState
 		bg.shader = testshader.shader;
 		curbg = bg;
 
-		var stageHills:FlxSprite = new FlxSprite(-300, 200).loadGraphic(Paths.image('toass/jokegrass'));
+		var stageHills:FlxSprite = new FlxSprite(-300, 200).loadGraphic(Paths.image('backgrounds/joke/jokegrass'));
 		stageHills.setGraphicSize(Std.int(stageHills.width * 2.5));
 		stageHills.updateHitbox();
 		stageHills.antialiasing = true;
