@@ -343,7 +343,7 @@ if (SONG.song.toLowerCase() == 'thunderstorm')
 
 	var backMount:FlxSprite = new FlxSprite(-700, -40).loadGraphic(Paths.image('backgrounds/thunda/backmount'));
 	backMount.scrollFactor.set(0.4, 1);
-	backMount.setGraphicSize(Std.int(ground.width * 1.7));
+	backMount.setGraphicSize(Std.int(backMount.width * 1.7));
 	add(backMount);
 
 	var middleMount:FlxSprite = new FlxSprite(-240, 200).loadGraphic(Paths.image('backgrounds/thunda/middlemount'));
